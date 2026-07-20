@@ -7,9 +7,9 @@ const structuredData = {
       "@type": "WebPage",
       "@id": `${siteUrl}/#webpage`,
       url: `${siteUrl}/`,
-      name: "静岡市清水区のホームページ制作｜初心者にもやさしく丁寧に",
+      name: "静岡市清水区のホームページ制作｜最短1週間・初心者も安心",
       description:
-        "静岡市清水区の中小事業者・個人店向けに、文章づくりから公開後まで支援するホームページ制作サービスです。",
+        "静岡市清水区の中小事業者・個人店向けに、素材が揃っていれば最短1週間で公開するホームページ制作サービスです。",
       inLanguage: "ja-JP",
       mainEntity: { "@id": `${siteUrl}/#service` },
     },
@@ -19,7 +19,7 @@ const structuredData = {
       name: "静岡市清水区のホームページ制作",
       serviceType: "ホームページ制作・Webサイト制作",
       description:
-        "初心者にも分かりやすい説明で、ページ構成、デザイン、スマートフォン対応、基本的なSEO対策、公開後サポートまでお手伝いします。",
+        "初心者にも分かりやすい説明で、最短1週間のスピード制作、スマートフォン対応、基本的なSEO対策、公開後サポートまでお手伝いします。",
       areaServed: {
         "@type": "AdministrativeArea",
         name: "静岡県静岡市清水区",
@@ -90,7 +90,7 @@ const works = [
     alt: "Cafe & Bar HANAのホームページ制作サンプル",
     aim: "爽やかな青を基調に、料理や店内の雰囲気が伝わり、初めての方も来店を思い描きやすい構成にまとめました。",
     scope: ["ページ構成", "デザイン", "ページの組み立て", "スマートフォン表示", "画面アニメーション", "メニュー・店舗情報の整理"],
-    delivery: "約4〜6週間",
+    delivery: "最短1週間",
   },
   {
     slug: "nail",
@@ -102,7 +102,7 @@ const works = [
     alt: "Nail Salon Lienのホームページ制作サンプル",
     aim: "落ち着いたローズゴールドを基調に、施術写真とメニューを見やすく整理し、安心して予約できる雰囲気にまとめました。",
     scope: ["ページ構成", "デザイン", "ページの組み立て", "スマートフォン表示", "画面アニメーション", "メニュー・予約導線の整理"],
-    delivery: "約4〜6週間",
+    delivery: "最短1週間",
   },
   {
     slug: "hair",
@@ -114,7 +114,7 @@ const works = [
     alt: "ATELIER LUCEのホームページ制作サンプル",
     aim: "写真が引き立つダークトーンを使い、上質さを保ちながら、メニューや店舗情報へ迷わず進める構成にしました。",
     scope: ["ページ構成", "デザイン", "ページの組み立て", "スマートフォン表示", "画面アニメーション", "スタイル・店舗情報の整理"],
-    delivery: "約4〜6週間",
+    delivery: "最短1週間",
   },
   {
     slug: "seitai",
@@ -126,7 +126,7 @@ const works = [
     alt: "からだ整体院のホームページ制作サンプル",
     aim: "やさしい緑と余白を生かし、施術内容や院内の様子を順序よく伝えて、初めてでも相談しやすい印象に整えました。",
     scope: ["ページ構成", "デザイン", "ページの組み立て", "スマートフォン表示", "画面アニメーション", "施術内容・相談導線の整理"],
-    delivery: "約4〜6週間",
+    delivery: "最短1週間",
   },
 ];
 
@@ -179,7 +179,7 @@ const faqs = [
   },
   {
     q: "制作期間はどのくらいですか？",
-    a: "5ページのホームページで、お打ち合わせから公開まで約4〜6週間が目安です。内容や資料の準備状況により前後します。",
+    a: "必要な原稿と写真が揃っている場合は、最短1週間で公開できます。ページ数、内容、修正回数、資料の準備状況によっては期間が延びるため、最初のお打ち合わせで納期をご案内します。",
   },
   {
     q: "表示されている料金以外に費用はかかりますか？",
@@ -239,7 +239,8 @@ export default function Home() {
             </h1>
             <p className="hero-lead">
               清水区の店舗・中小事業者の方へ。「何を載せたらいいの？」から、いっしょに考えます。<br />
-              むずかしい言葉を使わず、公開後まで丁寧にお手伝いします。
+              むずかしい言葉を使わず、公開後まで丁寧にお手伝いします。<br />
+              原稿と写真が揃っている場合は、最短1週間で公開できます。
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#contact">
@@ -250,7 +251,7 @@ export default function Home() {
             </div>
             <ul className="hero-notes" aria-label="ご相談について">
               <li>ご相談無料</li>
-              <li>原稿づくりもお手伝い</li>
+              <li>最短1週間で公開</li>
               <li>無理な営業はしません</li>
             </ul>
           </div>
@@ -338,7 +339,7 @@ export default function Home() {
               <ul className="local-service-points" aria-label="清水区の事業者向けホームページ制作の特徴">
                 <li><span aria-hidden="true">01</span><strong>お店や仕事の強みが伝わる文章づくり</strong></li>
                 <li><span aria-hidden="true">02</span><strong>スマホ対応と基本的なSEO対策</strong></li>
-                <li><span aria-hidden="true">03</span><strong>料金を確認してから始められる安心設計</strong></li>
+                <li><span aria-hidden="true">03</span><strong>最短1週間のスピード制作にも対応</strong></li>
               </ul>
             </div>
           </div>
@@ -351,7 +352,7 @@ export default function Home() {
                 <p className="section-kicker">制作実績</p>
                 <h2 id="works-title">実際の制作イメージを<br />ご覧ください。</h2>
               </div>
-              <p>すべてスマホ対応済み・<br />アニメーション付きです。</p>
+              <p>すべてスマホ対応済み・<br />アニメーション付き。<br />同規模なら最短1週間で公開。</p>
             </header>
 
             <div className="works-grid">
@@ -402,7 +403,7 @@ export default function Home() {
                         </div>
                         <div className="work-card-detail">
                           <dt>納期目安</dt>
-                          <dd><strong className="work-card-delivery">{work.delivery}</strong>（内容・素材の準備状況により前後します）</dd>
+                          <dd><strong className="work-card-delivery">{work.delivery}</strong>（原稿・写真が揃っている場合）</dd>
                         </div>
                       </dl>
                       <span className="work-card-link">

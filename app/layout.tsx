@@ -14,9 +14,9 @@ export async function generateMetadata(): Promise<Metadata> {
       ? "http"
       : "https");
   const metadataBase = new URL(`${protocol}://${host}`);
-  const title = "静岡市清水区のホームページ制作｜初心者にもやさしく丁寧に";
+  const title = "静岡市清水区のホームページ制作｜最短1週間・初心者も安心";
   const description =
-    "静岡市清水区でホームページ制作・作成をお考えの中小事業者、個人店の方へ。文章づくり、スマホ対応、基本的なSEO対策、公開後サポートまで丁寧にお手伝いします。料金44,000円から。";
+    "静岡市清水区でホームページ制作・作成をお考えの中小事業者、個人店の方へ。原稿と写真が揃っていれば最短1週間で公開。スマホ対応・基本的なSEO対策込み、料金44,000円から。";
 
   return {
     metadataBase,
