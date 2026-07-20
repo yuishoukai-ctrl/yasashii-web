@@ -726,8 +726,8 @@ main {
 
 .work-card figcaption {
   position: relative;
-  min-height: 220px;
-  padding: 25px 132px 27px 0;
+  min-height: 0;
+  padding: 25px 0 72px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -773,6 +773,54 @@ main {
   letter-spacing: 0.06em;
 }
 
+.work-card-details {
+  display: grid;
+  gap: 15px;
+  margin: 23px 0 0;
+  padding: 20px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.work-card-detail {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr);
+  gap: 16px;
+  margin: 0;
+}
+
+.work-card-detail dt {
+  color: var(--work-accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.9;
+}
+
+.work-card-detail dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.work-card-scope {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.work-card-scope li {
+  display: inline;
+}
+
+.work-card-scope li:not(:last-child)::after {
+  margin: 0 0.45em;
+  color: var(--work-accent);
+  content: "／";
+}
+
 .work-card-link {
   position: absolute;
   right: 0;
@@ -809,6 +857,14 @@ main {
 .work-card:focus-visible {
   outline: 3px solid var(--mustard);
   outline-offset: 8px;
+}
+
+.works-note {
+  margin: 52px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: right;
 }
 
 .pricing {
@@ -1676,6 +1732,15 @@ footer p {
     padding: 21px 0 69px;
   }
 
+  .work-card-detail {
+    grid-template-columns: 68px minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .work-card-detail dd {
+    font-size: 13px;
+  }
+
   .work-card h3 {
     font-size: 25px;
   }
@@ -1684,6 +1749,12 @@ footer p {
     right: auto;
     bottom: 21px;
     left: 0;
+  }
+
+  .works-note {
+    margin-top: 40px;
+    font-size: 11px;
+    text-align: left;
   }
 
   .price-table {

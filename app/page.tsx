@@ -31,6 +31,8 @@ const works = [
     href: "https://yuishoukai-ctrl.github.io/coconala-samples/restaurant/",
     image: "/portfolio/restaurant.webp",
     alt: "Cafe & Bar HANAのホームページ制作サンプル",
+    aim: "爽やかな青を基調に、料理や店内の雰囲気が伝わり、初めての方も来店を思い描きやすい構成にまとめました。",
+    scope: ["ページ構成", "デザイン", "ページの組み立て", "スマートフォン表示", "画面アニメーション", "メニュー・店舗情報の整理"],
   },
   {
     slug: "nail",
@@ -40,6 +42,8 @@ const works = [
     href: "https://yuishoukai-ctrl.github.io/coconala-samples/nail-salon/",
     image: "/portfolio/nail-salon.webp",
     alt: "Nail Salon Lienのホームページ制作サンプル",
+    aim: "落ち着いたローズゴールドを基調に、施術写真とメニューを見やすく整理し、安心して予約できる雰囲気にまとめました。",
+    scope: ["ページ構成", "デザイン", "ページの組み立て", "スマートフォン表示", "画面アニメーション", "メニュー・予約導線の整理"],
   },
   {
     slug: "hair",
@@ -49,6 +53,8 @@ const works = [
     href: "https://yuishoukai-ctrl.github.io/coconala-samples/hair-salon/",
     image: "/portfolio/hair-salon.webp",
     alt: "ATELIER LUCEのホームページ制作サンプル",
+    aim: "写真が引き立つダークトーンを使い、上質さを保ちながら、メニューや店舗情報へ迷わず進める構成にしました。",
+    scope: ["ページ構成", "デザイン", "ページの組み立て", "スマートフォン表示", "画面アニメーション", "スタイル・店舗情報の整理"],
   },
   {
     slug: "seitai",
@@ -58,6 +64,8 @@ const works = [
     href: "https://yuishoukai-ctrl.github.io/coconala-samples/seitai/",
     image: "/portfolio/seitai.webp",
     alt: "からだ整体院のホームページ制作サンプル",
+    aim: "やさしい緑と余白を生かし、施術内容や院内の様子を順序よく伝えて、初めてでも相談しやすい印象に整えました。",
+    scope: ["ページ構成", "デザイン", "ページの組み立て", "スマートフォン表示", "画面アニメーション", "施術内容・相談導線の整理"],
   },
 ];
 
@@ -282,6 +290,22 @@ export default function Home() {
                         <li>スマホ対応</li>
                         <li>アニメーション</li>
                       </ul>
+                      <dl className="work-card-details">
+                        <div className="work-card-detail">
+                          <dt>制作の狙い</dt>
+                          <dd>{work.aim}</dd>
+                        </div>
+                        <div className="work-card-detail">
+                          <dt>担当範囲</dt>
+                          <dd>
+                            <ul className="work-card-scope">
+                              {work.scope.map((item) => (
+                                <li key={item}>{item}</li>
+                              ))}
+                            </ul>
+                          </dd>
+                        </div>
+                      </dl>
                       <span className="work-card-link">
                         サイトを見る <span aria-hidden="true">↗</span>
                       </span>
@@ -290,6 +314,7 @@ export default function Home() {
                 </a>
               ))}
             </div>
+            <p className="works-note">掲載しているホームページは、業種別に制作したサンプルサイトです。</p>
           </div>
         </section>
 
