@@ -14,14 +14,28 @@ export async function generateMetadata(): Promise<Metadata> {
       ? "http"
       : "https");
   const metadataBase = new URL(`${protocol}://${host}`);
-  const title = "○○ウェブ制作室｜初心者のためのホームページ制作";
+  const title = "静岡市清水区のホームページ制作｜初心者にもやさしく丁寧に";
   const description =
-    "パソコンが苦手な方にも、むずかしい言葉を使わず丁寧に。中小事業者・個人店のホームページ制作を、文章づくりから公開後までお手伝いします。";
+    "静岡市清水区でホームページ制作・作成をお考えの中小事業者、個人店の方へ。文章づくり、スマホ対応、基本的なSEO対策、公開後サポートまで丁寧にお手伝いします。料金44,000円から。";
 
   return {
     metadataBase,
     title,
     description,
+    alternates: {
+      canonical: "/",
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
     icons: {
       icon: "/favicon.png",
       shortcut: "/favicon.png",
@@ -29,6 +43,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       type: "website",
       locale: "ja_JP",
+      url: "/",
       title,
       description,
       images: [
@@ -36,7 +51,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: "/og.png",
           width: 1200,
           height: 630,
-          alt: "○○ウェブ制作室のホームページ制作案内",
+          alt: "静岡市清水区の初心者にもやさしいホームページ制作案内",
         },
       ],
     },

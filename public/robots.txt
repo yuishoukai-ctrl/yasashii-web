@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yasashii-web-studio-jp.yuishoukai.chatgpt.site/sitemap.xml

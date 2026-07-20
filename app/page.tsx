@@ -1,3 +1,60 @@
+const siteUrl = "https://yasashii-web-studio-jp.yuishoukai.chatgpt.site";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/#webpage`,
+      url: `${siteUrl}/`,
+      name: "静岡市清水区のホームページ制作｜初心者にもやさしく丁寧に",
+      description:
+        "静岡市清水区の中小事業者・個人店向けに、文章づくりから公開後まで支援するホームページ制作サービスです。",
+      inLanguage: "ja-JP",
+      mainEntity: { "@id": `${siteUrl}/#service` },
+    },
+    {
+      "@type": "Service",
+      "@id": `${siteUrl}/#service`,
+      name: "静岡市清水区のホームページ制作",
+      serviceType: "ホームページ制作・Webサイト制作",
+      description:
+        "初心者にも分かりやすい説明で、ページ構成、デザイン、スマートフォン対応、基本的なSEO対策、公開後サポートまでお手伝いします。",
+      areaServed: {
+        "@type": "AdministrativeArea",
+        name: "静岡県静岡市清水区",
+      },
+      audience: {
+        "@type": "BusinessAudience",
+        audienceType: "中小事業者・個人事業主・店舗経営者",
+      },
+      offers: [
+        {
+          "@type": "Offer",
+          name: "まずは1ページプラン",
+          price: "44000",
+          priceCurrency: "JPY",
+          url: `${siteUrl}/#price`,
+        },
+        {
+          "@type": "Offer",
+          name: "基本のホームページプラン",
+          price: "88000",
+          priceCurrency: "JPY",
+          url: `${siteUrl}/#price`,
+        },
+        {
+          "@type": "Offer",
+          name: "しっかり情報発信プラン",
+          price: "132000",
+          priceCurrency: "JPY",
+          url: `${siteUrl}/#price`,
+        },
+      ],
+    },
+  ],
+};
+
 const worries = [
   "ホームページは欲しいけれど、何から始めればいいか分からない",
   "パソコンや専門用語が苦手で、相談するのが少し不安",
@@ -33,6 +90,7 @@ const works = [
     alt: "Cafe & Bar HANAのホームページ制作サンプル",
     aim: "爽やかな青を基調に、料理や店内の雰囲気が伝わり、初めての方も来店を思い描きやすい構成にまとめました。",
     scope: ["ページ構成", "デザイン", "ページの組み立て", "スマートフォン表示", "画面アニメーション", "メニュー・店舗情報の整理"],
+    delivery: "約4〜6週間",
   },
   {
     slug: "nail",
@@ -44,6 +102,7 @@ const works = [
     alt: "Nail Salon Lienのホームページ制作サンプル",
     aim: "落ち着いたローズゴールドを基調に、施術写真とメニューを見やすく整理し、安心して予約できる雰囲気にまとめました。",
     scope: ["ページ構成", "デザイン", "ページの組み立て", "スマートフォン表示", "画面アニメーション", "メニュー・予約導線の整理"],
+    delivery: "約4〜6週間",
   },
   {
     slug: "hair",
@@ -55,6 +114,7 @@ const works = [
     alt: "ATELIER LUCEのホームページ制作サンプル",
     aim: "写真が引き立つダークトーンを使い、上質さを保ちながら、メニューや店舗情報へ迷わず進める構成にしました。",
     scope: ["ページ構成", "デザイン", "ページの組み立て", "スマートフォン表示", "画面アニメーション", "スタイル・店舗情報の整理"],
+    delivery: "約4〜6週間",
   },
   {
     slug: "seitai",
@@ -66,6 +126,7 @@ const works = [
     alt: "からだ整体院のホームページ制作サンプル",
     aim: "やさしい緑と余白を生かし、施術内容や院内の様子を順序よく伝えて、初めてでも相談しやすい印象に整えました。",
     scope: ["ページ構成", "デザイン", "ページの組み立て", "スマートフォン表示", "画面アニメーション", "施術内容・相談導線の整理"],
+    delivery: "約4〜6週間",
   },
 ];
 
@@ -95,7 +156,7 @@ const included = [
   ["01", "スマートフォン対応", "スマホでも読みやすい画面に整えます"],
   ["02", "文章づくりのお手伝い", "お話をもとに、伝わる文章へまとめます"],
   ["03", "お問い合わせ導線", "電話やメールへ迷わず進めるよう設計します"],
-  ["04", "基本的な検索対策", "地域名やサービス名を意識して設定します"],
+  ["04", "基本的なSEO対策", "静岡市清水区などの地域名とサービス内容が伝わるよう設定します"],
   ["05", "公開までの設定", "サーバーやドメインの準備もご案内します"],
   ["06", "公開後1か月サポート", "小さな修正やご質問に対応します"],
 ];
@@ -124,11 +185,21 @@ const faqs = [
     q: "表示されている料金以外に費用はかかりますか？",
     a: "ホームページの住所となるドメインと、データを置くサーバーの費用が別途必要です。必要な金額は、お申し込み前に分かりやすくご説明します。",
   },
+  {
+    q: "SEO対策も料金に含まれていますか？",
+    a: "ページの題名や説明文、見出し、スマートフォン表示など、検索エンジンに内容を正しく伝えるための基本設定は料金に含まれます。検索順位を保証するものではありませんが、公開後の情報更新についてもご案内します。",
+  },
 ];
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+        }}
+      />
       <a className="skip-link" href="#main-content">
         本文へ移動
       </a>
@@ -161,13 +232,13 @@ export default function Home() {
       <main id="main-content">
         <section className="hero" id="top" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow"><span aria-hidden="true" />50代・60代の事業者さまへ</p>
+            <p className="eyebrow"><span aria-hidden="true" />静岡市清水区の50代・60代の事業者さまへ</p>
             <h1 id="hero-title">
               パソコンが苦手でも、<br />大丈夫。
-              <span>あなたの仕事を、きちんと伝える<br className="wide-break" />ホームページを。</span>
+              <span>清水区で、あなたの仕事をきちんと伝える<br className="wide-break" />ホームページを。</span>
             </h1>
             <p className="hero-lead">
-              「何を載せたらいいの？」から、いっしょに考えます。<br />
+              清水区の店舗・中小事業者の方へ。「何を載せたらいいの？」から、いっしょに考えます。<br />
               むずかしい言葉を使わず、公開後まで丁寧にお手伝いします。
             </p>
             <div className="hero-actions">
@@ -249,6 +320,30 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="local-service" id="shimizu" aria-labelledby="shimizu-title">
+          <div className="local-service-inner">
+            <header className="local-service-heading">
+              <p className="section-kicker">静岡市清水区の事業者さまへ</p>
+              <h2 id="shimizu-title">清水区で、相談しやすい<br />ホームページ制作を。</h2>
+            </header>
+            <div className="local-service-copy">
+              <p className="local-service-lead">
+                静岡市清水区でホームページ制作・ホームページ作成をお考えの店舗、中小事業者、個人事業主の方へ。
+                専門用語をできるだけ使わず、お仕事の内容や地域のお客さまに伝えたいことを一緒に整理します。
+              </p>
+              <p>
+                地域名を入れるだけではなく、サービス内容・料金・制作事例・相談方法まで、
+                検索する方が知りたい情報を分かりやすい見出しと文章で整えます。
+              </p>
+              <ul className="local-service-points" aria-label="清水区の事業者向けホームページ制作の特徴">
+                <li><span aria-hidden="true">01</span><strong>お店や仕事の強みが伝わる文章づくり</strong></li>
+                <li><span aria-hidden="true">02</span><strong>スマホ対応と基本的なSEO対策</strong></li>
+                <li><span aria-hidden="true">03</span><strong>料金を確認してから始められる安心設計</strong></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         <section className="works" id="works" aria-labelledby="works-title">
           <div className="works-inner">
             <header className="works-heading">
@@ -304,6 +399,10 @@ export default function Home() {
                               ))}
                             </ul>
                           </dd>
+                        </div>
+                        <div className="work-card-detail">
+                          <dt>納期目安</dt>
+                          <dd><strong className="work-card-delivery">{work.delivery}</strong>（内容・素材の準備状況により前後します）</dd>
                         </div>
                       </dl>
                       <span className="work-card-link">
@@ -424,7 +523,7 @@ export default function Home() {
             <span className="brand-mark" aria-hidden="true">○</span>
             <span><strong>○○ウェブ制作室</strong><small>まちのホームページ相談所</small></span>
           </a>
-          <p>〒000-0000 ○○県○○市○○町0-0-0</p>
+          <p>静岡市清水区を中心に、ホームページ制作のご相談を受け付けています。</p>
         </div>
         <p>© 2026 ○○ウェブ制作室</p>
       </footer>
