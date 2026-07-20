@@ -22,6 +22,45 @@ const approach = [
   },
 ];
 
+const works = [
+  {
+    slug: "restaurant",
+    name: "Cafe & Bar HANA",
+    category: "飲食店向け",
+    tone: "爽やかブルー系",
+    href: "https://yuishoukai-ctrl.github.io/coconala-samples/restaurant/",
+    image: "/portfolio/restaurant.webp",
+    alt: "Cafe & Bar HANAのホームページ制作サンプル",
+  },
+  {
+    slug: "nail",
+    name: "Nail Salon Lien",
+    category: "美容サロン向け",
+    tone: "ローズゴールド系・上品",
+    href: "https://yuishoukai-ctrl.github.io/coconala-samples/nail-salon/",
+    image: "/portfolio/nail-salon.webp",
+    alt: "Nail Salon Lienのホームページ制作サンプル",
+  },
+  {
+    slug: "hair",
+    name: "ATELIER LUCE",
+    category: "美容室向け",
+    tone: "ダーク系・高級感",
+    href: "https://yuishoukai-ctrl.github.io/coconala-samples/hair-salon/",
+    image: "/portfolio/hair-salon.webp",
+    alt: "ATELIER LUCEのホームページ制作サンプル",
+  },
+  {
+    slug: "seitai",
+    name: "からだ整体院",
+    category: "治療院向け",
+    tone: "ナチュラルグリーン系・信頼感",
+    href: "https://yuishoukai-ctrl.github.io/coconala-samples/seitai/",
+    image: "/portfolio/seitai.webp",
+    alt: "からだ整体院のホームページ制作サンプル",
+  },
+];
+
 const plans = [
   {
     name: "まずは1ページプラン",
@@ -98,6 +137,7 @@ export default function Home() {
 
           <nav className="desktop-nav" aria-label="主要メニュー">
             <a href="#about">私たちについて</a>
+            <a href="#works">制作実績</a>
             <a href="#price">料金</a>
             <a href="#flow">制作の流れ</a>
             <a href="#faq">よくある質問</a>
@@ -196,6 +236,58 @@ export default function Home() {
                     <p>{item.text}</p>
                   </div>
                 </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="works" id="works" aria-labelledby="works-title">
+          <div className="works-inner">
+            <header className="works-heading">
+              <div>
+                <p className="section-kicker">制作実績</p>
+                <h2 id="works-title">実際の制作イメージを<br />ご覧ください。</h2>
+              </div>
+              <p>すべてスマホ対応済み・<br />アニメーション付きです。</p>
+            </header>
+
+            <div className="works-grid">
+              {works.map((work, index) => (
+                <a
+                  className={`work-card work-card--${work.slug}`}
+                  href={work.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${work.name}の制作サンプルを新しいタブで見る`}
+                  key={work.name}
+                >
+                  <figure>
+                    <div className="work-card-visual">
+                      <img
+                        src={work.image}
+                        alt={work.alt}
+                        width="1200"
+                        height="750"
+                        loading="lazy"
+                      />
+                      <span className="work-card-number" aria-hidden="true">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                    </div>
+                    <figcaption>
+                      <p className="work-card-category">{work.category}</p>
+                      <h3>{work.name}</h3>
+                      <p className="work-card-tone">{work.tone}</p>
+                      <ul className="work-card-features" aria-label={`${work.name}の対応内容`}>
+                        <li>スマホ対応</li>
+                        <li>アニメーション</li>
+                      </ul>
+                      <span className="work-card-link">
+                        サイトを見る <span aria-hidden="true">↗</span>
+                      </span>
+                    </figcaption>
+                  </figure>
+                </a>
               ))}
             </div>
           </div>
