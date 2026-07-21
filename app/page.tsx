@@ -250,8 +250,8 @@ export default function Home() {
           <div className="hero-copy">
             <p className="eyebrow"><span aria-hidden="true" />静岡市清水区の50代・60代の事業者さまへ</p>
             <h1 id="hero-title">
-              パソコンが苦手でも、<br />大丈夫。
-              <span>清水区で、あなたの仕事をきちんと伝える<br className="wide-break" />ホームページを。</span>
+              <span className="hero-title-main">伝わるホームページを、<br />いっしょにつくります。</span>
+              <span className="hero-title-sub">相談から公開後まで、分かりやすくお手伝いします。</span>
             </h1>
             <p className="hero-lead">
               清水区の店舗・中小事業者の方へ。「何を載せたらいいの？」から、いっしょに考えます。<br />

@@ -11,8 +11,8 @@
   --muted: #686c68;
   --line: #d7d0c3;
   --white: #ffffff;
-  --sans: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", Meiryo, sans-serif;
-  --serif: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Noto Serif JP", serif;
+  --sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic Medium", "Yu Gothic", Meiryo, -apple-system, BlinkMacSystemFont, sans-serif;
+  --serif: var(--sans);
   --content: 1180px;
 }
 
@@ -203,8 +203,7 @@ main {
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
-  min-height: calc(100vh - 82px);
-  max-height: 860px;
+  min-height: clamp(620px, calc(100vh - 82px), 820px);
   background: var(--cream);
 }
 
@@ -213,7 +212,7 @@ main {
   justify-content: center;
   flex-direction: column;
   min-width: 0;
-  padding: 78px clamp(42px, 5.5vw, 92px) 70px max(48px, calc((100vw - 1360px) / 2 + 24px));
+  padding: 64px clamp(42px, 5vw, 82px) 56px max(48px, calc((100vw - 1360px) / 2 + 24px));
   animation: pageEnter 700ms 80ms both cubic-bezier(0.2, 0.75, 0.2, 1);
 }
 
@@ -223,7 +222,7 @@ main {
   color: var(--rust);
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.055em;
 }
 
 .eyebrow {
@@ -233,8 +232,8 @@ main {
 }
 
 .eyebrow span {
-  width: 42px;
-  height: 2px;
+  width: 28px;
+  height: 1px;
   background: var(--rust);
 }
 
@@ -245,28 +244,38 @@ main {
 .contact h2 {
   margin: 0;
   font-family: var(--serif);
-  font-weight: 600;
-  letter-spacing: 0.015em;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
 .hero h1 {
-  font-size: clamp(38px, 4.25vw, 66px);
-  line-height: 1.28;
+  font-size: clamp(38px, 3.3vw, 50px);
+  line-height: 1.34;
+  text-wrap: balance;
 }
 
-.hero h1 > span {
+.hero-title-main {
   display: block;
-  margin-top: 16px;
+  white-space: nowrap;
+}
+
+.hero-title-sub {
+  display: block;
+  margin-top: 18px;
   color: var(--teal);
-  font-size: 0.55em;
-  line-height: 1.65;
+  font-size: 0.4em;
+  font-weight: 700;
+  line-height: 1.75;
+  text-wrap: pretty;
+  white-space: nowrap;
 }
 
 .hero-lead {
-  margin: 30px 0 0;
+  max-width: 35em;
+  margin: 26px 0 0;
   color: #4b504e;
   font-size: clamp(15px, 1.2vw, 17px);
-  line-height: 2;
+  line-height: 1.9;
 }
 
 .hero-actions {
@@ -400,6 +409,7 @@ main {
   color: var(--teal);
   font-family: var(--serif);
   font-size: 16px;
+  font-weight: 700;
 }
 
 .status-dot {
@@ -415,14 +425,16 @@ main {
 .image-caption {
   position: absolute;
   z-index: 2;
-  right: 17px;
-  bottom: 70px;
+  right: 18px;
+  bottom: 62px;
   margin: 0;
-  color: rgba(255, 255, 255, 0.9);
+  padding: 7px 10px;
+  background: rgba(14, 59, 58, 0.82);
+  color: #ffffff;
   font-family: var(--serif);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  writing-mode: vertical-rl;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.035em;
 }
 
 .section-shell {
@@ -443,7 +455,7 @@ main {
   font-family: var(--serif);
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.04em;
 }
 
 .section-kicker {
@@ -634,7 +646,7 @@ main {
   font-family: var(--serif);
   font-size: clamp(32px, 3.6vw, 52px);
   font-weight: 600;
-  letter-spacing: -0.035em;
+  letter-spacing: 0;
   line-height: 1.48;
 }
 
@@ -714,7 +726,7 @@ main {
   font-family: var(--serif);
   font-size: clamp(34px, 4.2vw, 61px);
   font-weight: 600;
-  letter-spacing: -0.035em;
+  letter-spacing: 0;
   line-height: 1.42;
 }
 
@@ -834,7 +846,7 @@ main {
   font-family: var(--serif);
   font-size: clamp(24px, 2.35vw, 34px);
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   line-height: 1.35;
 }
 
@@ -1061,7 +1073,7 @@ main {
   font-family: var(--serif);
   font-size: clamp(34px, 3.8vw, 48px);
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .plan-price > span {
@@ -1170,7 +1182,7 @@ main {
   font-family: var(--serif);
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.04em;
 }
 
 .process-list h3 {
@@ -1251,7 +1263,7 @@ main {
   color: var(--rust);
   font-family: var(--serif);
   font-size: 12px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.035em;
 }
 
 .faq-answer {
@@ -1321,7 +1333,7 @@ main {
   font-size: clamp(31px, 3.6vw, 45px);
   font-weight: 600;
   line-height: 1.25;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.01em;
 }
 
 .contact-box > p:nth-of-type(2) {
@@ -1658,14 +1670,15 @@ footer p {
   }
 
   .hero h1 {
-    font-size: clamp(34px, 10.6vw, 48px);
+    font-size: clamp(24px, 7.6vw, 34px);
     line-height: 1.32;
   }
 
-  .hero h1 > span {
+  .hero-title-sub {
     margin-top: 13px;
     font-size: 0.53em;
     line-height: 1.7;
+    white-space: normal;
   }
 
   .hero-lead br {
