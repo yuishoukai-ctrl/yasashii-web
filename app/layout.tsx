@@ -14,9 +14,9 @@ export async function generateMetadata(): Promise<Metadata> {
       ? "http"
       : "https");
   const metadataBase = new URL(`${protocol}://${host}`);
-  const title = "静岡市清水区のホームページ制作｜最短1週間・初心者も安心";
+  const title = "静岡市清水区のホームページ制作｜やさしいWeb制作";
   const description =
-    "静岡市清水区でホームページ制作・作成をお考えの中小事業者、個人店の方へ。原稿と写真が揃っていれば最短1週間で公開。スマホ対応・基本的なSEO対策込み、料金44,000円から。";
+    "研装システムズ Web制作事業部の『やさしいWeb制作』。静岡市清水区の中小事業者・個人店向けに、最短1週間、スマホ対応・基本SEO対策込み、44,000円から制作します。";
 
   return {
     metadataBase,
@@ -48,10 +48,10 @@ export async function generateMetadata(): Promise<Metadata> {
       description,
       images: [
         {
-          url: "/og.png",
-          width: 1200,
-          height: 630,
-          alt: "静岡市清水区の初心者にもやさしいホームページ制作案内",
+          url: "/og-kenso-division.png",
+          width: 1731,
+          height: 909,
+          alt: "研装システムズ Web制作事業部・やさしいWeb制作の案内",
         },
       ],
     },
@@ -59,7 +59,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title,
       description,
-      images: ["/og.png"],
+      images: ["/og-kenso-division.png"],
     },
   };
 }

@@ -12,6 +12,7 @@ const structuredData = {
         "静岡市清水区の中小事業者・個人店向けに、素材が揃っていれば最短1週間で公開するホームページ制作サービスです。",
       inLanguage: "ja-JP",
       mainEntity: { "@id": `${siteUrl}/#service` },
+      publisher: { "@id": `${siteUrl}/#organization` },
     },
     {
       "@type": "Service",
@@ -20,6 +21,7 @@ const structuredData = {
       serviceType: "ホームページ制作・Webサイト制作",
       description:
         "初心者にも分かりやすい説明で、最短1週間のスピード制作、スマートフォン対応、基本的なSEO対策、公開後サポートまでお手伝いします。",
+      provider: { "@id": `${siteUrl}/#organization` },
       areaServed: {
         "@type": "AdministrativeArea",
         name: "静岡県静岡市清水区",
@@ -51,6 +53,17 @@ const structuredData = {
           url: `${siteUrl}/#price`,
         },
       ],
+    },
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "研装システムズ",
+      url: "https://kensosystems.jp/",
+      department: {
+        "@type": "Organization",
+        name: "やさしいWeb制作｜Web制作事業部",
+        url: `${siteUrl}/`,
+      },
     },
   ],
 };
@@ -206,11 +219,11 @@ export default function Home() {
 
       <header className="site-header">
         <div className="header-inner">
-          <a className="brand" href="#top" aria-label="○○ウェブ制作室 ホーム">
-            <span className="brand-mark" aria-hidden="true">○</span>
+          <a className="brand" href="#top" aria-label="やさしいWeb制作 ホーム">
+            <span className="brand-mark" aria-hidden="true">や</span>
             <span>
-              <strong>○○ウェブ制作室</strong>
-              <small>まちのホームページ相談所</small>
+              <strong>やさしいWeb制作</strong>
+              <small>研装システムズ Web制作事業部</small>
             </span>
           </a>
 
@@ -220,6 +233,7 @@ export default function Home() {
             <a href="#price">料金</a>
             <a href="#flow">制作の流れ</a>
             <a href="#faq">よくある質問</a>
+            <a href="https://kensosystems.jp/" target="_blank" rel="noreferrer">研装システムズ ↗</a>
           </nav>
 
           <a className="header-phone" href="tel:0000000000">
@@ -317,6 +331,19 @@ export default function Home() {
                   </div>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="group-division" aria-labelledby="group-division-title">
+          <div className="group-division-inner">
+            <div>
+              <p className="section-kicker">KENSO SYSTEMS / WEB CREATION DIVISION</p>
+              <h2 id="group-division-title">研装システムズの<br />Web制作事業部です。</h2>
+            </div>
+            <div className="group-division-copy">
+              <p>「やさしいWeb制作」は、研装システムズが運営するWeb制作サービスです。設備事業とは窓口とサービス内容を分け、ホームページ制作を専門にご案内します。</p>
+              <a href="https://kensosystems.jp/" target="_blank" rel="noreferrer">研装システムズ 産業機械事業部を見る <span aria-hidden="true">→</span></a>
             </div>
           </div>
         </section>
@@ -521,12 +548,13 @@ export default function Home() {
       <footer>
         <div>
           <a className="brand footer-brand" href="#top">
-            <span className="brand-mark" aria-hidden="true">○</span>
-            <span><strong>○○ウェブ制作室</strong><small>まちのホームページ相談所</small></span>
+            <span className="brand-mark" aria-hidden="true">や</span>
+            <span><strong>やさしいWeb制作</strong><small>研装システムズ Web制作事業部</small></span>
           </a>
           <p>静岡市清水区を中心に、ホームページ制作のご相談を受け付けています。</p>
+          <a className="footer-network-link" href="https://kensosystems.jp/" target="_blank" rel="noreferrer">研装システムズ 産業機械事業部 ↗</a>
         </div>
-        <p>© 2026 ○○ウェブ制作室</p>
+        <p>© 2026 KENSO SYSTEMS / WEB CREATION DIVISION</p>
       </footer>
     </>
   );
