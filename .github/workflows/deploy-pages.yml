@@ -17,9 +17,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      PAGES_BASE_PATH: /yasashii-web
-      NEXT_PUBLIC_BASE_PATH: /yasashii-web
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
