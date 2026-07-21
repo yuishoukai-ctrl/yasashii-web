@@ -336,19 +336,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="group-division" aria-labelledby="group-division-title">
-          <div className="group-division-inner">
-            <div>
-              <p className="section-kicker">KENSO SYSTEMS / WEB CREATION DIVISION</p>
-              <h2 id="group-division-title">研装システムズの<br />Web制作事業部です。</h2>
-            </div>
-            <div className="group-division-copy">
-              <p>「やさしいWeb制作」は、研装システムズが運営するWeb制作サービスです。設備事業とは窓口とサービス内容を分け、ホームページ制作を専門にご案内します。</p>
-              <a href="https://kensosystems.jp/" target="_blank" rel="noreferrer">研装システムズ 産業機械事業部を見る <span aria-hidden="true">→</span></a>
-            </div>
-          </div>
-        </section>
-
         <section className="local-service" id="shimizu" aria-labelledby="shimizu-title">
           <div className="local-service-inner">
             <header className="local-service-heading">
