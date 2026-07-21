@@ -1,4 +1,5 @@
-const siteUrl = "https://yasashii-web-studio-jp.yuishoukai.chatgpt.site";
+const siteUrl = "https://web.kensosystems.jp";
+const assetPath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -99,7 +100,7 @@ const works = [
     category: "飲食店向け",
     tone: "爽やかブルー系",
     href: "https://yuishoukai-ctrl.github.io/coconala-samples/restaurant/",
-    image: "/portfolio/restaurant.webp",
+    image: `${assetPath}/portfolio/restaurant.webp`,
     alt: "Cafe & Bar HANAのホームページ制作サンプル",
     aim: "爽やかな青を基調に、料理や店内の雰囲気が伝わり、初めての方も来店を思い描きやすい構成にまとめました。",
     scope: ["ページ構成", "デザイン", "ページの組み立て", "スマートフォン表示", "画面アニメーション", "メニュー・店舗情報の整理"],
@@ -111,7 +112,7 @@ const works = [
     category: "美容サロン向け",
     tone: "ローズゴールド系・上品",
     href: "https://yuishoukai-ctrl.github.io/coconala-samples/nail-salon/",
-    image: "/portfolio/nail-salon.webp",
+    image: `${assetPath}/portfolio/nail-salon.webp`,
     alt: "Nail Salon Lienのホームページ制作サンプル",
     aim: "落ち着いたローズゴールドを基調に、施術写真とメニューを見やすく整理し、安心して予約できる雰囲気にまとめました。",
     scope: ["ページ構成", "デザイン", "ページの組み立て", "スマートフォン表示", "画面アニメーション", "メニュー・予約導線の整理"],
@@ -123,7 +124,7 @@ const works = [
     category: "美容室向け",
     tone: "ダーク系・高級感",
     href: "https://yuishoukai-ctrl.github.io/coconala-samples/hair-salon/",
-    image: "/portfolio/hair-salon.webp",
+    image: `${assetPath}/portfolio/hair-salon.webp`,
     alt: "ATELIER LUCEのホームページ制作サンプル",
     aim: "写真が引き立つダークトーンを使い、上質さを保ちながら、メニューや店舗情報へ迷わず進める構成にしました。",
     scope: ["ページ構成", "デザイン", "ページの組み立て", "スマートフォン表示", "画面アニメーション", "スタイル・店舗情報の整理"],
@@ -135,7 +136,7 @@ const works = [
     category: "治療院向け",
     tone: "ナチュラルグリーン系・信頼感",
     href: "https://yuishoukai-ctrl.github.io/coconala-samples/seitai/",
-    image: "/portfolio/seitai.webp",
+    image: `${assetPath}/portfolio/seitai.webp`,
     alt: "からだ整体院のホームページ制作サンプル",
     aim: "やさしい緑と余白を生かし、施術内容や院内の様子を順序よく伝えて、初めてでも相談しやすい印象に整えました。",
     scope: ["ページ構成", "デザイン", "ページの組み立て", "スマートフォン表示", "画面アニメーション", "施術内容・相談導線の整理"],
@@ -174,7 +175,7 @@ const included = [
   ["06", "公開後1か月サポート", "小さな修正やご質問に対応します"],
 ];
 
-const process = [
+const productionSteps = [
   ["01", "無料相談", "お電話またはオンラインで、ご希望やお困りごとを伺います。"],
   ["02", "内容の整理・お見積り", "必要なページと掲載内容を整理し、事前に費用をご案内します。"],
   ["03", "デザイン・制作", "途中の画面をご確認いただきながら、少しずつ形にしていきます。"],
@@ -273,7 +274,7 @@ export default function Home() {
           <div className="hero-visual">
             <div className="hero-image-frame">
               <img
-                src="/consultation.webp"
+                src={`${assetPath}/consultation.webp`}
                 alt="相談者の話を聞きながらホームページの制作内容を説明する担当者"
                 width="1400"
                 height="933"
@@ -310,7 +311,7 @@ export default function Home() {
         <section className="approach" id="about" aria-labelledby="approach-title">
           <div className="approach-media">
             <img
-              src="/responsive-device.webp"
+              src={`${assetPath}/responsive-device.webp`}
               alt="パソコンとスマートフォンに表示された見やすいホームページ"
               width="1200"
               height="900"
@@ -500,7 +501,7 @@ export default function Home() {
             </div>
           </div>
           <ol className="process-list">
-            {process.map(([number, title, text]) => (
+            {productionSteps.map(([number, title, text]) => (
               <li key={number}>
                 <span className="process-number">STEP {number}</span>
                 <div><h3>{title}</h3><p>{text}</p></div>
