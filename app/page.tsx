@@ -60,6 +60,7 @@ const structuredData = {
       "@id": `${siteUrl}/#organization`,
       name: "研装システムズ",
       url: "https://kensosystems.jp/",
+      telephone: "+81-50-1785-0018",
       department: {
         "@type": "Organization",
         name: "やさしいWeb制作｜Web制作事業部",
@@ -237,9 +238,9 @@ export default function Home() {
             <a href="https://kensosystems.jp/" target="_blank" rel="noreferrer">研装システムズ ↗</a>
           </nav>
 
-          <a className="header-phone" href="tel:0000000000">
+          <a className="header-phone" href="tel:05017850018">
             <span>お電話でのご相談</span>
-            00-0000-0000
+            050-1785-0018
           </a>
         </div>
       </header>
@@ -524,7 +525,7 @@ export default function Home() {
             </div>
             <div className="contact-box">
               <p className="contact-label"><span className="status-dot" aria-hidden="true" />お電話でのご相談</p>
-              <a href="tel:0000000000" className="contact-phone">00-0000-0000</a>
+              <a href="tel:05017850018" className="contact-phone">050-1785-0018</a>
               <p>受付時間　平日 9:00〜18:00</p>
               <span className="contact-divider">または</span>
               <a className="button button-light" href="mailto:info@example.jp">メールで相談する <span aria-hidden="true">→</span></a>

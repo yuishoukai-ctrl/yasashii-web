@@ -9,6 +9,9 @@ test("statically exports the Web production division site", async () => {
   assert.doesNotMatch(html, /研装システムズの(?:<br\s*\/?>)?Web制作事業部です/);
   assert.match(html, /href="https:\/\/kensosystems\.jp\/"/);
   assert.match(html, /KENSO SYSTEMS \/ WEB CREATION DIVISION/);
+  assert.match(html, /href="tel:05017850018"/);
+  assert.match(html, /050-1785-0018/);
+  assert.doesNotMatch(html, /00-0000-0000|tel:0000000000/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|Building your site/);
 });
 
